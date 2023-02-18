@@ -1,6 +1,5 @@
 package chess;
 
-import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -125,8 +124,8 @@ public class ChessMatch {
 	  	if(promoted ==null) {
 	  		throw new IllegalStateException("there is no piece to be promoted");
 	  	}
-	  	if (type.equals("B") && !type.equals("C") && !type.equals("T") && !type.equals("Q")) {
-	  		throw new InvalidParameterException("Invalid type for promotion");
+	  	if (type.equals("B") && !type.equals("C") && !type.equals("T") & !type.equals("Q")) {
+	  		return promoted;
 	  	}
 	  	
 	  	Position pos= promoted.getChessPosition().ToPosition();
